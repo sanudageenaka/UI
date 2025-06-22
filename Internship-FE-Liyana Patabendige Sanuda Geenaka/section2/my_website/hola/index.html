@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Automation Section</title>
+  <meta name="viewport" content="width=613", initial-scale="1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #fff;
+    }
+    .ai-section {
+      position: relative;
+      width: 100vw;
+      min-height: 216px;
+      height: 250px;
+      display: flex;
+      background: linear-gradient(125.27deg, #FF59FC -32.83%, #6B1065 44.71%);
+      ;
+      overflow: hidden;
+      align-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    
+
+    }
+    /* Grid overlay */
+    .ai-section::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .ai-content {
+      position: relative;
+      z-index: 2;
+      flex: 1 1 0;
+      /*display: flex; */
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 40px;
+      color: #fff;
+      right:404px;
+      right: 378px;
+    top: 38px;
+      
+    }
+    .ai-title {
+      font-size: 1.556rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.39;
+      max-width: 336px;
+      
+    }
+    .ai-btn {
+      background: #A86DB7;
+      color: #FFFFFF;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      cursor: pointer;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ai-btn::after {
+      content: "›";
+      font-size: 1.2em;
+      margin-left: 4px;
+      color: #FFFFFF;
+    }
+    .ai-images {
+      position: relative;
+      width: 320px;
+      min-width: 220px;
+      /*display: flex;*/
+      align-items: flex-end;
+      justify-content: flex-end;
+      z-index: 2;
+      top: 30px;
+      right: -322px;
+    }
+    .tablet-back {
+      position: absolute;
+      top: -40px;
+      right: 40px;
+      width: 140px;
+      height: 180px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      border: 4px solid #222;
+      z-index: 1;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #03002F;
+      right: 391px;
+      
+    }
+    .tablet-back img {
+      width: 100%;
+    height: 82%;
+    object-fit: cover;
+    position: relative;
+    top: 19px;
+    right: 0px;
+     
+    }
+    .tablet-front {
+      position: absolute;
+      width: 180px;
+      height: 230px;
+      background: #111;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+      border: 5px solid #222;
+      z-index: 2;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      right: 485px;
+    }
+    .tablet-front-content {
+      color: #fff;
+      padding: 24px 16px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      background: radial-gradient(circle at 80% 10%, #3b4edb 0%, #111 80%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center; /* Center content horizontally */
+     
+    }
+    .tablet-front-content span {
+      font-size: 1 rem;
+      font-weight:700;
+      background: linear-gradient(to right, #ff3381, #007AFF,#39CCCC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      z-index:3;
+      
+
+    }
+    .tablet-front-content .highlight {
+      font-size: 1 rem;
+      font-weight:700;
+      background: linear-gradient(to right, #ff3381, #007AFF, #39CCCC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      z-index:3;
+      
+    }
+    .tablet-front-content .highlight2 {
+      font-size: 1 rem;
+      font-weight:700;
+      background: linear-gradient(to right, #ff3381, #007AFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      z-index:3;
+      right:43px;
+      
+    }
+    .image22{
+      width: 825px;
+    height: 347px;
+    margin-bottom: -13px;
+    transform: rotate(399deg);
+    filter: hue-rotate(316deg) saturate(243%) brightness(110%) opacity(0.9);
+    border-radius: 10px;
+}
+    
+    .title-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center text horizontally */
+      text-align: center; /* Ensure text inside is also centered */
+    }
+    .main-title {
+      font-size: 1.2rem;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+    .sub-title {
+      font-size: 0.75rem;
+      font-weight: 400;
+      margin-top: 5px;
+      position: relative;
+      right: 13px;
+    }
+    .image220 {
+    width: 825px;
+    height: 470px;
+    margin-bottom: -13px;
+    transform: rotate(341deg);
+    filter: hue-rotate(313deg) saturate(123%) brightness(95%) opacity(0.9);
+    border-radius: 10px;
+    position: relative;
+    top: 57px;
+    right: -764px;
+}
+    .sg{
+      width: 1272px;
+      height: 270px;
+    }
+   .sub-title2{
+    position: relative;
+    top:0px;
+    right:33px
+   }
+    @media (max-width: 700px) {
+      .ai-section {
+        flex-direction: column;
+        height: auto;
+        min-height: 400px;
+      }
+      .ai-content {
+        padding: 32px 16px 0 16px;
+      }
+      .ai-images {
+        width: 100%;
+        justify-content: center;
+        margin-top: 16px;
+      }
+      .tablet-back {
+        right: 20vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ai-section">
+   
+      
+  <img src="public/new100.png" alt="rd220.png" class="image220" style="border-radius: 10px;">
+    <div class="ai-content">
+     
+      <div class="ai-title">
+        AI Automation:<br>
+        Elevating Team Efficiency<br>
+        and Scalability
+      </div>
+      <button class="ai-btn">Get Your Free Guide</button>
+    </div>
+    <div class="ai-images">
+      
+      <div class="tablet-back">
+        <img src="public/back_tab.png" alt="eBook page">
+      </div>
+      <div class="tablet-front">
+        <div class="tablet-front-content">
+          <img src="public/image10.png" alt="rd.png" class="image22" style="border-radius: 10px;">
+          <div class="title-group">
+            <div class="main-title">
+              <span>The AI-Driven</span><br>
+              <span class="highlight">Automation +</span>
+              <span class="highlight2">Edge</span>
+            </div>
+            <div class="sub-title">
+              Performance and<br>Growth for Digital<br><div class="sub-title2">Teams</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+</body>
+</html>

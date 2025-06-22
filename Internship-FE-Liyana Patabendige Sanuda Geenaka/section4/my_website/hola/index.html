@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eager to Begin Your Journey?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="hero-section">
+    <div class="overlay"></div>
+    <img src="public/logo.png" alt="Background Glow" class="glow-bg" />
+    <div class="content">
+      <h1>
+        Eager to Begin<br />
+        Your Journey?
+      </h1>
+      <button>Let's Connect</button>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const content = document.querySelector('.content');
+      content.classList.add('fade-in');
+
+      const button = document.querySelector('.content button');
+      button.addEventListener('mouseenter', () => {
+        button.classList.add('scale-up');
+      });
+      button.addEventListener('mouseleave', () => {
+        button.classList.remove('scale-up');
+      });
+    });
+  </script>
+</body>
+</html>
